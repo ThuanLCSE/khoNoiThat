@@ -1,0 +1,19 @@
+<div ng-controller="UserController"
+ class="form-center" >
+	<h2>Đăng nhập vào của hàng</h2>
+	<h3><span ng-bind="error" class="label label-danger"></span></h3>
+	<form ng-submit="signin()" method="post">
+		 <div class="form-group ">
+		 	<label for="username"  >
+                Username
+            </label>
+		<input type="text" class="form-control" tabindex="1" name="username" ng-model="username"/> </div>
+		<div class="form-group ">
+            <label for="password"  >
+                Password
+            </label> 
+            <input type="password" data-ng-model="password" class="form-control" name="password" tabindex="1" required/>
+		<input type="submit"  id="submit" tabindex="5" class="btn-lg btn-success" value="Đăng nhập"/>
+
+	</form>
+</div>

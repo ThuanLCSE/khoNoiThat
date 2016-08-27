@@ -1,0 +1,17 @@
+<div id="setQuantityModal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+  	 <div class="modal-content">
+  	<form>
+  		<h3 class="btn-theme-inverse">Chọn số lượng</h3>
+  		<p>{{flag.currentWarehouse=='preOrder'?'Hàng về kho ':'Xuất kho'}}
+  			<input type="text" class="input-sm" ng-model="flag.quantity"/> trong số {{furnitureData.quantity}}. </p>
+      <h4><span ng-show="flag.quantity > furnitureData.quantity" class="label label-danger">Nhập số lượng hợp lý</span></h4>
+  		<div ng-show="flag.quantity <= furnitureData.quantity" class="bottom-button">
+		     <button type="button" ng-show="flag.currentWarehouse === 'warehouse'" class="btn btn-theme" data-dismiss="modal" ng-click="sellWarehouse()">Xuất</button>
+		     <button type="button" ng-show="flag.currentWarehouse === 'preOrder'" class="btn btn-theme" data-dismiss="modal" ng-click="importPreOrder()">Nhập</button>    
+		 </div>
+     <button type="button"class="btn btn-theme" data-dismiss="modal">Hủy bỏ</button>
+	 </form>
+	  <div class="modal-content">
+  </div>
+</div>

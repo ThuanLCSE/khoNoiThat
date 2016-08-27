@@ -1,0 +1,56 @@
+ <h1><span class="label btn-theme-inverse">Hàng trong kho</span></h1>
+    <table class="table-striped table-bordered table-container">
+        <tr>
+            <th >
+                Mã hàng
+            </th>
+            <th>
+                Tên hàng
+            </th>
+            <th class="tr-center">
+                Loại
+            </th>
+            <th>
+                Số lượng
+            </th>
+            <th>
+                Giá đơn vị
+            </th>
+            <th>
+                Tổng
+            </th>
+            <th>
+                Ngày nhập kho
+            </th>
+        </tr>
+        <tr ng-repeat="furniture in furnitureList"
+           > 
+            <td class="tr-center">
+                 <i class="fa fa-pencil-square-o fa-fw"  data-toggle="modal" data-target="#editModal" ng-click="setFurnitureData($index,'warehouse')" aria-hidden="true"></i>
+                {{furniture.code}}
+            </td>
+            <td >
+                {{furniture.name}}  
+               
+            </td>
+            <td class="tr-center">
+                {{furniture.type}}
+            </td><td>
+                {{furniture.quantity}}
+            </td>
+            <td>
+                {{furniture.price}}
+            </td>
+            <td>
+                {{furniture.price * furniture.quantity}}
+            </td> <td>
+                {{furniture.lastComeInDay |  date:"dd/MM/yy" }}
+            </td>
+            <td class="text-function"
+               data-toggle="modal" data-target="#removeModal" ng-click="setFurnitureData($index,'warehouse')">Xóa khỏi kho
+            </td>
+             <td class="text-function"
+               data-toggle="modal" data-target="#setQuantityModal" ng-click="setFurnitureData($index,'warehouse')">Xuất kho/Bán
+            </td>
+        </tr>
+    </table>

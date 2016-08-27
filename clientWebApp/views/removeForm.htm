@@ -1,0 +1,17 @@
+
+<div id="removeModal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+    	<form>
+      <p>Bạn muốn xóa 
+      <span class="high">{{furnitureData.name}}</span>, mã số 
+      <span class="high">{{furnitureData.code}}</span> ra khỏi 
+      <span class="high">{{flag.currentWarehouse=='preOrder'?'lô hàng nhập':'lô hàng trong kho'}}</span> phải không ?</p>
+	     <div class="bottom-button">
+		 	<button type="button" class="btn btn-theme" data-dismiss="modal" ng-click="removeFurniture()">Có</button>
+		    <button type="button" class="btn btn-theme" data-dismiss="modal">Không</button>
+	    </div>
+	</form>
+    </div>
+  </div>
+</div>

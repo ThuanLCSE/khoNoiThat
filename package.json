@@ -1,0 +1,24 @@
+{
+  "name": "noithat-warehouse",
+  "version": "1.0.0",
+  "description": "quan ly hang noi that trong kho de ban",
+  "main": "server.js",
+  "dependencies": {
+    "express": "~4.8.8",
+    "morgan": "~1.3.0",
+    "body-parser": "~1.8.0",
+    "method-override": "~2.2.0",
+    "express-session": "~1.7.6",
+    "ejs": "~1.0.0",
+    "mongoose": "~3.8.15",
+    "mongoose-schema-extend":"~0.2.0",
+    "connect-mongo": "~0.4.1",
+    "cookie-parser": "~1.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "CongThuan",
+  "license": "ISC"
+}

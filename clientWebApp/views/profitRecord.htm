@@ -1,0 +1,89 @@
+<div class="function-line">
+ <span class="label btn-theme-inverse">Tìm doanh thu theo tháng</span>
+        <select ng-options="number.month as number.month for number in dates track by number.month" ng-model="flag.searchMonth"></select>
+         <button class="btn btn-theme" ng-click="searchRecordByMonth()"  type="button"><i class="fa fa-search fa-fw" aria-hidden="true"></i></button>
+        <button class="btn btn-theme" data-toggle="modal" data-target="#addProfitModal"  type="button">Thêm doanh thu</button>
+</div>
+
+<table class="table-bordered table-container">
+    <tr>
+        <th class="tr-center">
+            Doanh thu tháng
+        </th>
+        <th>
+            Từ ngày
+        </th>
+        <th>
+            Đến ngày
+        </th>
+        <th>
+            Tổng doanh thu
+        </th>
+    </tr>
+    <tr ng-repeat="record in recordList"
+       >
+        <td class="tr-center">
+            {{record.month}} / {{record.year?record.year:1990}}
+        </td>
+        <td>
+            {{record.from |  date:"dd/MM/yy"}}
+        </td>
+        <td>
+            {{record.to |  date:"dd/MM/yy"}}
+        </td>
+        <td>
+            {{record.total?record.total:0}} VNĐ
+        </td>
+    </tr>
+</table>
+
+
+
+
+<div id="addProfitModal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+       <form ng-submit="addRecord()" method="post">
+        <div class="inline-group">
+            <div class="form-group ">
+                <label for="month"  >
+                    Tháng
+                </label>
+                <select class="form-control" name="month" ng-options="number.month as number.month for number in dates track by number.month" ng-model="recordData.month"></select>
+            </div>
+            <div class="form-group ">
+                <label for="year"  >
+                    Năm
+                </label>
+
+                <input type="text" class="form-control" tabindex="1" name="year" ng-model="recordData.year"/> 
+            </div>
+        </div>
+            <div class="form-group ">
+                <label for="total"  >
+                    Tổng
+                </label>
+                <input type="text" class="form-control" tabindex="1" name="total" ng-model="recordData.total"/> 
+            </div>
+        <div class="inline-group">
+            <div class="form-group ">
+                <label for="from"  >
+                    Từ ngày
+                </label>
+                <input date-time format="DD-MM-YYYY" type="text" class="form-control" tabindex="1" view="date" min-view="date" name="from" ng-model="recordData.from"/> 
+            </div>
+            <div class="form-group ">
+                <label for="to"  >
+                    Đến ngày
+                </label>
+                <input date-time format="DD-MM-YYYY" type="text" class="form-control" tabindex="1" view="date" min-view="date" name="to" ng-model="recordData.to"/> 
+            </div>
+        </div>
+        <div class="bottom-button">
+            <input type="submit" class="btn btn-theme" value="Thêm doanh thu"/>
+             <button type="button" class="btn btn-theme" data-dismiss="modal">Hủy bỏ</button>
+        </div>
+        </form>
+    </div>
+  </div>
+</div>

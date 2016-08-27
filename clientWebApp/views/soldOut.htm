@@ -1,0 +1,54 @@
+
+    <table border="2">
+        <tr>
+            <th>
+                Code
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Type
+            </th>
+            <th>
+                Quantity
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                total
+            </th>
+            <th>
+                sellDay
+            </th>
+            <th> Remove
+            </th>
+        </tr>
+        <tr ng-repeat="furniture in furnitureList"
+           >
+            <td class="tr-center">
+                <i class="fa fa-pencil-square-o fa-fw"  data-toggle="modal" data-target="#editModal" ng-click="setFurnitureData($index,'soldOut')" aria-hidden="true"></i>
+                {{furniture.code}}
+            </td>
+            <td  ng-click="callEditByIndexForm($index,'soldOut')">
+                {{furniture.name}}
+            </td>
+            <td>
+                {{furniture.type}}
+            </td><td>
+                {{furniture.quantity}}
+            </td>
+            <td>
+                {{furniture.price}}
+            </td>
+            <td>
+                {{furniture.totalPrice}}
+            </td> <td>
+                {{furniture.sellDay |  date:"dd/MM/yy" }}
+            </td>
+            <td>
+                <button ng-click="callRemoveByIndexForm($index,'soldOut')">Del</button>
+            </td>
+        </tr>
+    </table>

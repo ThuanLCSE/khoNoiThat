@@ -1,0 +1,70 @@
+<div ng-controller="FurnitureController" ng-init="checkSession()">
+    <div ng-controller="ProfitRecordController">
+    <div class="navbar navbar-fixed-left">
+      <h2 class="text-white">Tính năng</h2>
+      <ul class="nav navbar-nav">
+        <li class="li-search-nav">
+            <div class="input-group">
+                <input type="text" class="form-control" ng-model="searchInput"/>
+                <span class="input-group-btn">
+                 <button class="btn btn-theme-inverse" data-toggle="modal" data-target="#searchModal"  type="button"><i class="fa fa-search fa-fw" aria-hidden="true"></i></button>
+                </span>
+            </div>
+        </li>
+        <li data-toggle="modal" data-target="#addModal" class="li-nav" ng-click="callAddForm('warehouse')">
+             <i class="fa fa-plus fa-fw" aria-hidden="true"></i>
+                Thêm hàng vào kho</li>
+        <li data-toggle="modal" data-target="#addModal" class="li-nav" ng-click="callAddForm('preOrder')">
+             <i class="fa fa-plus fa-fw" aria-hidden="true"></i>
+             Đặt thêm hàng</li>
+        <li class="li-nav" ng-click="showTable('warehouse')">
+             <i class="fa fa-bank fa-fw" aria-hidden="true"></i>
+             Xem kho</li>
+        <li class="li-nav" ng-click="showTable('preOrder')">
+             <i class="fa fa-cart-plus fa-fw" aria-hidden="true"></i>
+            Xem hàng đã đặt</li>
+        <li class="li-nav" ng-click="showProfitRecord()">
+             <i class="fa fa-dollar fa-fw" aria-hidden="true"></i>
+            Xem thống kê doanh thu</li>
+        <li class="li-nav" ng-controller="UserController" ng-click="signout()">
+             <i class="fa fa-user-secret fa-fw" aria-hidden="true"></i>
+            Rời hệ thống</li>
+      </ul>
+    </div>
+    <div class="corner">
+            <div class="top-right">
+                <h3><span class="label label-danger">Chào mừng chị Mai vào hệ thống</span></h3>
+            </div>
+        </div>
+    <div class="container container-center">
+        <div class="title-center">
+            <h2 class="big-title btn-theme-inverse">Quản lý kho cửa hàng HƯNG THỊNH</h2>
+
+            <div ng-include="flag.tableUrl">
+            </div> 
+        </div>
+    	
+        
+
+        
+
+    </div>
+    <!--modal-->
+        <div ng-include="formUrl">
+        </div>
+        <div ng-include="'views/removeForm.htm'">
+        </div>
+        <div ng-include="'views/addForm.htm'">
+        </div>
+        <div ng-include="'views/editForm.htm'">
+        </div>
+        <div ng-include="'views/resultModal.htm'">
+        </div>
+          <div ng-include="'views/checkCodeModal.htm'">
+        </div>
+        <div ng-include="'views/searchModal.htm'">
+        </div>
+        <div ng-include="'views/setQuantityModal.htm'">
+        </div>
+    </div>
+</div>

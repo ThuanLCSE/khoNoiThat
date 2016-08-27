@@ -1,0 +1,147 @@
+.navbar-fixed-left {
+    background-color: #2d8c7e;
+    width: 17vw;
+    position: fixed;
+    border-radius: 0;
+    height: 100%;
+}
+
+.navbar-fixed-left .navbar-nav>li {
+    float: none;
+}
+.text-white{
+  padding-left: 10px;
+  color: white;
+}
+.li-search-nav{
+      width: 90%;
+    margin-left: 5%;
+  margin-bottom: 10px;
+}
+.li-nav {
+  width: 85%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  border-top: 2px solid white;
+    margin-left: 5%;
+    margin-right: 3%;
+    font-size: 19px;
+    font-weight: bold;
+    color: white;
+    float: none;
+}
+.text-function{
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+}
+.text-function:hover{
+  text-decoration: underline;
+}
+.corner {
+    position: relative;
+}
+
+.corner > .top-right {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.form-center {
+    margin-top: 22vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 26vw;
+}
+
+.container-center {
+    margin-left: 190px;
+}
+.table-container{
+  width: 100%;
+}
+.modal-dialog{
+  background-color: white;
+}
+.btn-nav {
+    width: 100%;
+}
+.title-center{
+  margin-left: 4%;
+}
+.btn-theme{
+      margin-right: 8px;
+  background-color: #2d8c7e;
+  color: white;
+}
+.btn-theme-inverse, th{
+  padding-left: 2px;
+  padding-bottom: 3px;
+    padding-top: 4px;
+  color: #2d8c7e;
+  background-color: white;
+  font-size: 18px;
+}
+.tr-center{
+  width: 9%;
+  text-align: center;
+}
+td {
+  padding-left: 4px;
+}
+.function-line{
+  width: 480px;
+  display: flex;
+}
+.label-theme{
+  background-color: #2d8c7e;
+    font-size: 18px;
+    font-weight: normal;
+}
+.big-title{
+  font-weight: bold;
+  font-size: 42px;
+}
+.modal-content > form{
+    margin-left: 40px;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+.form-group > label, p > .high{
+  font-weight: bold;
+  color: #2d8c7e;
+}
+.med-title{
+  font-weight: bold;
+  font-size: 33px;
+}
+form > .bottom-button{
+  text-align: right;
+}
+.fa-pencil-square-o:hover{
+  text-decoration: underline;
+  font-weight: bolder;
+}
+.fa-pencil-square-o{
+  cursor: pointer;
+}
+form > p {
+      font-size: 22px;
+}
+.modal-md {
+  width: 400px;
+}
+.input-sm{
+  width: 70px;
+  font-size: 18px;
+}
+.inline-group{
+  display: flex;
+}
+.inline-group > .form-group{
+  margin-right: 30px;
+  width: 45%;
+}
