@@ -2,7 +2,7 @@ var configDetail = require('./config'),
 	mongoose = require('mongoose');
 
 module.exports = function(){
-	var noSqlDb = mongoose.connect(configDetail.dbUrl);
+	var noSqlDb = mongoose.connect(process.env.MONGODB_URI);
 
 	require('../serverApp/models/inWarehouse');
 	require('../serverApp/models/user');
