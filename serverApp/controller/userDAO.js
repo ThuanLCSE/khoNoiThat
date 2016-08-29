@@ -8,7 +8,7 @@ exports.signin = function(req,res){
 	},function(err, user){
 		if (err || user === null){
 			return res.status(400).send({
-				message : 'Failed'
+				message : err
 			});
 		} else {
 			var newSession = req.session;
